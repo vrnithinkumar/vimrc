@@ -11,6 +11,12 @@ Mode to edit add and correct text. Where you can type.
 - `Ctrl + h` Delete back one char.
 - `Ctrl + w` Delete a word.
 - `Ctrl + u` Delete to beginning of the line.
+- `Ctrl + [` Change to normal mode.
+- `Ctrl + o` Insert Normal mode.
+
+### Insert Normal Mode
+Just one command we can execute from the Insert mode.
+`Ctrl + o, zz` will move the current line to the center.
 
 ##  Basic Actions
 - `hjkl` - for moving around
