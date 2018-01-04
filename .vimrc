@@ -1,111 +1,91 @@
-"---------vundle code---------------"
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
+set nocompatible              " be iMproved, required
 
-call vundle#rc()
+if has("win32") || has("win64")
+	" Windows options here
+    call plug#begin('~/vimfiles/bundle')
+  	else
+    	if has("unix")
+            " *nix options here
+            call plug#begin('~/.vim/bundle')
+            endif
+endif
 
-" This is the Vundle package, which can be found on GitHub.
-" For GitHub repos, you specify plugins using the
-" 'user/repository' format
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
+Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/syntastic'
+Plug 'cburroughs/pep8'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'mattn/emmet-vim'
+Plug 'mhinz/vim-startify'
+Plug 'PProvost/vim-ps1'
+Plug 'kristijanhusak/vim-hybrid-material'
+call plug#end()
 
-" We could also add repositories with a ".git" extension
-Plugin 'scrooloose/nerdtree.git'
+" Tabs for makefiles, 2 spaces for YAML
+filetype plugin on 
 
-" To get plugins from Vim Scripts, you can reference the plugin
-" by name as it appears on the site
-Plugin 'Buffergator'
-
-Plugin 'osyo-manga/vim-brightest' " Highlight current word
-
-Plugin 'sudar/comments.vim'
-" Bulk (Un)Comment line.
-" " Ctrl-c - to comment a single line or visual block
-" " Ctrl-x - to un-comment a single line or visual block
-
-"--------------------Color Scheme--------------------"
-
-
-" Light ColorScheme
-Plugin 'lightdiff'
-"
-" 256 color schemes
-Plugin 'altercation/vim-colors-solarized.git'
-Plugin 'morhetz/gruvbox'
-
-"---------------JS Related plugins---------------"
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'moll/vim-node'
-Plugin 'marijnh/tern_for_vim'
-
-Plugin 'Valloric/YouCompleteMe' "YouCompleteMe and UltiSnips compatibility, with the helper of supertab
-let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
-
-
-call vundle#end()            " required
-filetype plugin indent on    " Now we can turn our filetype functionality back on
-
-" --------------Brief help-----------"
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to
-" auto-approve removal
-"---------------vundle code ends--------------"
-
-"---------------User Settings----------------"
+" syntax highlighting
 syntax on
-set tabstop=4     " Width of a tab is 4
-set shiftwidth=4  " number of spaces to use for auto indenting
-set softtabstop=4 " When backspace is used to delete spaces, delete 4 at a time. This is equal to tabstop and shfitwidth
-set listchars=tab:\|\ 
-set list
 
-set nowrap        " don't wrap lines
-set scrolloff=5   " Show at least 5 lines around the cursor
+" spaces > tabs
+set tabstop=4       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
 
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set autoindent    " always set auto indenting on
-set copyindent    " copy the previous indentation on autoindenting
-set smartindent   " Set intent smartly
+set shiftwidth=4    " Indents will have a width of 4
 
-set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
-set showmatch     " set show matching parenthesis
-set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
-set wildmenu      " Enhance auto completion
+set softtabstop=4   " Sets the number of columns for a TAB
 
-set number        " always show line numbers
-set ruler         " Show the current line number in the status bar
+set expandtab       " Expand TABs to spaces
 
-" ---------------------------------------------------------------------------
-"  "  " Common settings
-"  "  "
-"  "
-"  ----------------------------------------------------------------------------
-"  "  " Set to auto read when a file is changed from the outside
- set autoread
-"  "
-"  " History related settings
-set history=1000         " remember more commands and search history
-set undolevels=1000      " use many muchos levels of undo
-"  "
-"  "  " Visual settings
-set title                " change the terminal's title
-set visualbell           " don't beep
-set noerrorbells         " don't beep
-"  "
-"  "  "
-"  "
-"  ---------------------------------------------------------------------------
-"  "  " Search settings
-"  "  "
-"  "
-"  ----------------------------------------------------------------------------
-set ignorecase    " ignore case when searching. use \C to force case
-set smartcase     " ignore case if search pattern is all
-"  lowercase,case-sensitive otherwise
-set hlsearch      " highlight search terms
-set incsearch     " show search matches as you type
+" Gvim
+set guifont=Source_Code_Pro_Light:h11 " Set font for gvim
+
+" Pretty colour scheme
+set background=dark " Set background 
+colorscheme hybrid_material " Set background to theme that was installed earlier
+
+" Work with conemu
+if !has("gui_running")
+    set term=xterm
+    set t_Co=256
+    let &t_AB="\e[48;5;%dm"
+    let &t_AF="\e[38;5;%dm"
+    set mouse=a
+    inoremap <Esc>[62~ <C-X><C-E>
+    inoremap <Esc>[63~ <C-X><C-Y>
+    nnoremap <Esc>[62~ <C-E>
+    nnoremap <Esc>[63~ <C-Y>
+    colorscheme hybrid_material
+endif
+
+"DirectX
+if has("directx") && $VIM_USE_DIRECTX != '0'
+    set renderoptions=type:directx,taamode:1
+endif
+
+inoremap <Char-0x07F> <BS>
+nnoremap <Char-0x07F> <BS>
+
+" Vim Airline
+let g:airline_theme = "hybrid"
+let g:airline_powerline_fonts = 1
+let g:airline_enable_syntastic = 1
+
+set encoding=utf-8 " better than latin1
+setglobal fileencoding=utf-8
+set number
+
+""""""""""""""""""""""""""""""""""""""""""
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+""""""""""""""""""""""""""""""""""""""""""
