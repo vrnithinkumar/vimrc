@@ -13,6 +13,7 @@ Mode to edit add and correct text. Where you can type.
 - `Ctrl + u` Delete to beginning of the line.
 - `Ctrl + [` Change to normal mode.
 - `Ctrl + o` Insert Normal mode.
+- `Ctrl + r, {register}` is used to paste the in insert mode from register specified.
 
 ### Insert Normal Mode
 Just one command we can execute from the Insert mode.
