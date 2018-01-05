@@ -19,6 +19,10 @@ Mode to edit add and correct text. Where you can type.
 Just one command we can execute from the Insert mode.
 `Ctrl + o, zz` will move the current line to the center.
 
+### Visual Mode
+    Easy to manipulate in character level, line level and rectangular blocks. Many operations and commands will be work similar to Normal mode.
+
+
 ## Basic Actions
 - `hjkl` - for moving around
 - `w` - jump a word.
