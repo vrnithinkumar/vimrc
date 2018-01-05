@@ -19,7 +19,7 @@ Mode to edit add and correct text. Where you can type.
 Just one command we can execute from the Insert mode.
 `Ctrl + o, zz` will move the current line to the center.
 
-##  Basic Actions
+## Basic Actions
 - `hjkl` - for moving around
 - `w` - jump a word.
 - `$` - at the end of line
