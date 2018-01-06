@@ -20,7 +20,7 @@ Just one command we can execute from the Insert mode.
 `Ctrl + o, zz` will move the current line to the center.
 
 ### Visual Mode
-    Easy to manipulate in character level, line level and rectangular blocks. Many operations and commands will be work similar to Normal mode.
+Easy to manipulate in character level, line level and rectangular blocks. Many operations and commands will be work similar to Normal mode.
 
 
 ## Basic Actions
@@ -35,13 +35,14 @@ Just one command we can execute from the Insert mode.
 
 ### Insert
 - `i` is used for inserting.
+- `I` is used for inserting in the first of line. `^i` is equivalent to this.
 
 ### Dot to repeat
 - `.` will repeats last executed action. Will repeating the last action VIM will consider all changes inside an insert mode to exit as single action. 
 - It will repeat every keystroke inside the insert mode.
 
 ### Undo
-- 'u' for undoing. From the moment we enter Insert mode until we return to Normal mode, everything we type (or delete) counts as a single change.
+- `u` for undoing. From the moment we enter Insert mode until we return to Normal mode, everything we type (or delete) counts as a single change.
 
 ### Delete
 - `d`     id used for deleting a character.
