@@ -21,6 +21,9 @@ Just one command we can execute from the Insert mode.
 
 ### Visual Mode
 Easy to manipulate in character level, line level and rectangular blocks. Many operations and commands will be work similar to Normal mode.
+`v` will change in to the visual mode char level.
+`V` will change in to the visual mode line level.
+`Ctrl + v` will change in to the visual mode block level.
 
 
 ## Basic Actions
