@@ -23,9 +23,9 @@ Just one command we can execute from the Insert mode.
 Easy to manipulate in character level, line level and rectangular blocks. Many operations and commands will be work similar to Normal mode.
 `v` will change in to the visual mode char level.
 `V` will change in to the visual mode line level.
-`Ctrl + v` will change in to the visual mode block level.
-
-
+`Ctrl + v` will change in to the visual mode block level. But in windows `Ctrl + q` will make it to block visual mode.
+`o` will toggle the free end in the visual mode.
+                    
 ## Basic Actions
 - `hjkl` - for moving around
 - `w` - jump a word.
