@@ -25,6 +25,9 @@ Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify'
 Plug 'PProvost/vim-ps1'
 Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'Valloric/YouCompleteMe'
+Plug 'jceb/vim-orgmode'
+Plug 'itchyny/calendar.vim'
 call plug#end()
 
 " Tabs for makefiles, 2 spaces for YAML
@@ -89,3 +92,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 """"""""""""""""""""""""""""""""""""""""""
+" setting the shell as powershell
+"   set shell=powershell 
+" set shellcmdflag=-command
