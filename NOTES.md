@@ -77,6 +77,22 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
 
 ## VIM plugins
 
+### Vim-OrgMode
+**Plain List:**
+- `<localleader> cl or <CR>` - insert plainlist item below
+- `<localleader> cL or <C-S-CR>` - insert plainlist item above
+
+**Checkboxes:**
+- `<localleader> cc` - toggle status
+- `<localleader> cn or <CR>` - insert checkbox below
+- `<localleader> cN or <C-S-CR>` - insert checkbox above
+
+**Dates:**
+- `<localleader> sa` - insert date
+- `<localleader> si` - insert inactive date
+
+`<localleader>` is `\` for by default.
+
 ## Random hacks
 - `:r !date /t` will add the current date.
 
