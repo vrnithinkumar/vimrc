@@ -70,8 +70,17 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
   2. `:.,20y`    same with range, `:[range]y[ank] [x]`.
 
 ### Simple increment and Decrement
-- `Ctrl + a` will increment the number under the curser.
-- `Ctrl + x` will decrement the number under the curser.
+- `Ctrl + a` will increment the number under the cursor.
+- `Ctrl + x` will decrement the number under the cursor.
+
+### Search and Replace
+`:[range]s[ubstitute]/{pattern}/{string}/[flags] [count]` format for the search and replace command.
+**Flags**
+    1. [c] confirm on each substitution.
+    2. [g] replace all occurrences.
+    3. [i] ignore case for pattern.
+
+- `:%s\old\new\g` : will replace the "old" with "new" in all document. 
 
 ### Macro
 
