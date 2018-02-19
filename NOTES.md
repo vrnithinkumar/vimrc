@@ -68,6 +68,7 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
 - copy from current line to the n'th line
   1. `y20G`      this will yank from current line to 20th line.
   2. `:.,20y`    same with range, `:[range]y[ank] [x]`.
+  3. `"[register]y` will copy to the register specified. eg : `"*y` - Will copy to system clipbord(register *).
 
 ### Simple increment and Decrement
 - `Ctrl + a` will increment the number under the cursor.
@@ -115,6 +116,12 @@ with the <C-w> key
 <Ctrl-w><Down> - go to window below
 <Ctrl-w><Left> - go to window on left
 <Ctrl-w><Right> - go to window on right
+
+## Buffer 
+- `:new` will create a split window with an unnamed buffer. 
+- `:enew` will open one in the current window. 
+- `:vnew` will open one in a vertically split window. 
+- `:tabnew` will open one in a new tab.
 
 ## Random hacks
 - `:r !date /t` will add the current date.
