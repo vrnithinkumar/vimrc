@@ -62,7 +62,7 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
 - `>` is used for indentation.
 - `<` left shift
 - `=` Auto indentation.
-  1. `>G` will increases the indentation from the current line until the end of the file.
+- `>G` will increases the indentation from the current line until the end of the file.
 
 ### Yank
 - copy from current line to the n'th line
@@ -103,19 +103,20 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
 
 `<localleader>` is `\` for by default.
 
-## Split Screen
-with the <C-w> key
-<Ctrl-w>n - :new horizontal split (editing a new empty buffer)
-<Ctrl-w>s - :split window horizontally (editing current buffer)
-<Ctrl-w>v - :vsplit window vertically (editing current buffer)
-<Ctrl-w>c - :close window
-<Ctrl-w>o - close all windows, leaving :only the current window open
-<Ctrl-w>w - go to next window
-<Ctrl-w>p - go to previous window
-<Ctrl-w><Up> - go to window above
-<Ctrl-w><Down> - go to window below
-<Ctrl-w><Left> - go to window on left
-<Ctrl-w><Right> - go to window on right
+## Split Screen 
+**with the `<C-w>` key** 
+- `<Ctrl-w>n`       - `:new` horizontal split (editing a new empty buffer)
+- `<Ctrl-w>s`       - `:split` window horizontally (editing current buffer)
+- `<Ctrl-w>v`       - `:vsplit` window vertically (editing current buffer)
+- `<Ctrl-w>c`       - `:close` window
+- `<Ctrl-w>o`       - close all windows, leaving :only the current window open
+- `<Ctrl-w>w`       - go to next window
+- `<Ctrl-w>p`       - go to previous window
+- `<Ctrl-w><Up>`    - go to window above
+- `<Ctrl-w><Down>`  - go to window below
+- `<Ctrl-w><Left>`  - go to window on left
+- `<Ctrl-w><Right>` - go to window on right
+
 
 ## Buffer 
 - `:new` will create a split window with an unnamed buffer. 
