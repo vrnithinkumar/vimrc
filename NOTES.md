@@ -117,6 +117,12 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
 - `<Ctrl-w><Left>`  - go to window on left
 - `<Ctrl-w><Right>` - go to window on right
 
+### Window size commands
+- `Ctrl+W +/-` - increase/decrease height (ex. 20<C-w>+)    
+- `Ctrl+W >/<` - increase/decrease width (ex. 30<C-w><)    
+- `Ctrl+W _` - set height (ex. 50<C-w>_)    
+- `Ctrl+W |` - set width (ex. 50<C-w>|)    
+- `Ctrl+W =` - equalize width and height of all windows
 
 ## Buffer 
 - `:new` will create a split window with an unnamed buffer. 
