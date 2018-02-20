@@ -123,6 +123,12 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
 - `:enew` will open one in the current window. 
 - `:vnew` will open one in a vertically split window. 
 - `:tabnew` will open one in a new tab.
+- `:bn` will change to next buffer.
+- `:bp` will change to previous buffer.
+- `:br` will change to starting buffer list.
+- `:bf` will change to first buffer.
+- `:ls` will list all the buffers.
+- `:bd` will Delete the buffer , also we can specify the buffer id too.
 
 ## Random hacks
 - `:r !date /t` will add the current date.
