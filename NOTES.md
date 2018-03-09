@@ -32,6 +32,12 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
 - `$` - at the end of line
 - `^` - beginning of the line.
 
+### Advanced Movements
+- ` `. ` - jump to last change position.
+- `ma` - Mark the current curser location as "a".
+- ` `a` - Jump to mark named as "a".
+- `:marks` - List all marks.
+
 ### Append
 - `a` is used for appending.
 - `A` for appending to the end of the line. `$a` is another way to achieve this.
@@ -82,7 +88,17 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
 
 - `:%s\old\new\g` : will replace the "old" with "new" in all document. 
 
-### Macro
+## Registers
+Registers are essentially the names memory spaces in VIM to save and re-use the texts. Registers are being accessed by `"`.
+- `"ry` - will yank the selected text to register named "r".
+- `"rp` - will paste the content in register "r" in normal mode.
+- `Ctrl + r` - will paste the data from register "r".
+### Common registers
+1) `*` - System clipboard.
+20 ``
+
+## Macro
+
 
 ## VIM plugins
 
