@@ -68,12 +68,13 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
 - `>` is used for indentation.
 - `<` left shift
 - `=` Auto indentation.
-  1. `>G` will increases the indentation from the current line until the end of the file.
+- `>G` will increases the indentation from the current line until the end of the file.
 
 ### Yank
 - copy from current line to the n'th line
   1. `y20G`      this will yank from current line to 20th line.
   2. `:.,20y`    same with range, `:[range]y[ank] [x]`.
+  3. `"[register]y` will copy to the register specified. eg : `"*y` - Will copy to system clipbord(register *).
 
 ### Simple increment and Decrement
 - `Ctrl + a` will increment the number under the cursor.
@@ -117,6 +118,39 @@ Registers are essentially the names memory spaces in VIM to save and re-use the 
 - `<localleader> si` - insert inactive date
 
 `<localleader>` is `\` for by default.
+
+## Split Screen 
+**with the `<C-w>` key** 
+- `<Ctrl-w>n`       - `:new` horizontal split (editing a new empty buffer)
+- `<Ctrl-w>s`       - `:split` window horizontally (editing current buffer)
+- `<Ctrl-w>v`       - `:vsplit` window vertically (editing current buffer)
+- `<Ctrl-w>c`       - `:close` window
+- `<Ctrl-w>o`       - close all windows, leaving :only the current window open
+- `<Ctrl-w>w`       - go to next window
+- `<Ctrl-w>p`       - go to previous window
+- `<Ctrl-w><Up>`    - go to window above
+- `<Ctrl-w><Down>`  - go to window below
+- `<Ctrl-w><Left>`  - go to window on left
+- `<Ctrl-w><Right>` - go to window on right
+
+### Window size commands
+- `Ctrl+W +/-` - increase/decrease height (ex. 20<C-w>+)    
+- `Ctrl+W >/<` - increase/decrease width (ex. 30<C-w><)    
+- `Ctrl+W _` - set height (ex. 50<C-w>_)    
+- `Ctrl+W |` - set width (ex. 50<C-w>|)    
+- `Ctrl+W =` - equalize width and height of all windows
+
+## Buffer 
+- `:new` will create a split window with an unnamed buffer. 
+- `:enew` will open one in the current window. 
+- `:vnew` will open one in a vertically split window. 
+- `:tabnew` will open one in a new tab.
+- `:bn` will change to next buffer.
+- `:bp` will change to previous buffer.
+- `:br` will change to starting buffer list.
+- `:bf` will change to first buffer.
+- `:ls` will list all the buffers.
+- `:bd` will Delete the buffer , also we can specify the buffer id too.
 
 ## Random hacks
 - `:r !date /t` will add the current date.
