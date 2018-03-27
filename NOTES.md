@@ -100,6 +100,12 @@ Registers are essentially the names memory spaces in VIM to save and re-use the 
 
 ## Macro
 
+## Sessions
+Sessions are used to save the current state of vim and restore it when you needed.
+- `:mks` is used to create a session for your vim editor. 
+    eg: `:mks ~\vimsessions\bar.vim`
+- `:source` is used to restore the session which you saved. 
+    eg: `:source ~\vimsessions\bar.vim`
 
 ## VIM plugins
 
@@ -139,9 +145,10 @@ Registers are essentially the names memory spaces in VIM to save and re-use the 
 - `Ctrl+W _` - set height (ex. 50<C-w>_)    
 - `Ctrl+W |` - set width (ex. 50<C-w>|)    
 - `Ctrl+W =` - equalize width and height of all windows
-
+**Resizing will happen only by one characters.**
 ## Buffer 
 - `:new` will create a split window with an unnamed buffer. 
+- `:badd filename` will add the file to the bufferlist.
 - `:enew` will open one in the current window. 
 - `:vnew` will open one in a vertically split window. 
 - `:tabnew` will open one in a new tab.
