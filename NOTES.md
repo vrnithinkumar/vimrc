@@ -88,7 +88,10 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
     3. [i] ignore case for pattern.
 
 - `:%s\old\new\g` : will replace the "old" with "new" in all document. 
-
+### AutoComplete in vim
+- Auto word completion
+- Auto line completion
+- Auto file completion
 ## Registers
 Registers are essentially the names memory spaces in VIM to save and re-use the texts. Registers are being accessed by `"`.
 - `"ry` - will yank the selected text to register named "r".
