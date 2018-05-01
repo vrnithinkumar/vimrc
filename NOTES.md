@@ -82,10 +82,10 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
 
 ### Search and Replace
 `:[range]s[ubstitute]/{pattern}/{string}/[flags] [count]` format for the search and replace command.
-**Flags**
-1. [c] confirm on each substitution.
-2. [g] replace all occurrences.
-3. [i] ignore case for pattern.
+#### **Flags**
+- `c` confirm on each substitution.
+- `g` replace all occurrences.
+- `i` ignore case for pattern.
 
 - `:%s\old\new\g` : will replace the "old" with "new" in all document. 
 ### AutoComplete in vim
