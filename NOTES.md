@@ -100,7 +100,6 @@ Registers are essentially the names memory spaces in VIM to save and re-use the 
 - `Ctrl + r` - will paste the data from register "r".
 ### Common registers
 1) `*` - System clipboard.
-20 ``
 
 ## Macro
 
@@ -142,6 +141,7 @@ Sessions are used to save the current state of vim and restore it when you neede
 - `<Ctrl-w><Down>`  - go to window below
 - `<Ctrl-w><Left>`  - go to window on left
 - `<Ctrl-w><Right>` - go to window on right
+- `<C-w> <C-r>`     - To swap the two parts of a split window
 
 ### Window size commands
 - `Ctrl+W +/-` - increase/decrease height (ex. 20<C-w>+)    
