@@ -75,7 +75,7 @@ Easy to manipulate in character level, line level and rectangular blocks. Many o
   1. `y20G`      this will yank from current line to 20th line.
   2. `:.,20y`    same with range, `:[range]y[ank] [x]`.
   3. `"[register]y` will copy to the register specified. eg : `"*y` - Will copy to system clipbord(register *).
-  4. `:10yt.` will yank 10th line and paste below the current line.
+  4. `:10t.` will yank 10th line and paste below the current line.
 
 ### Simple increment and Decrement
 - `Ctrl + a` will increment the number under the cursor.
