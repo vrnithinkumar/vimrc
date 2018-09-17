@@ -111,24 +111,6 @@ Sessions are used to save the current state of vim and restore it when you neede
 - `:source` is used to restore the session which you saved. 
     eg: `:source ~\vimsessions\bar.vim`
 
-## VIM plugins
-
-### Vim-OrgMode
-**Plain List:**
-- `<localleader> cl or <CR>` - insert plainlist item below
-- `<localleader> cL or <C-S-CR>` - insert plainlist item above
-
-**Checkboxes:**
-- `<localleader> cc` - toggle status
-- `<localleader> cn or <CR>` - insert checkbox below
-- `<localleader> cN or <C-S-CR>` - insert checkbox above
-
-**Dates:**
-- `<localleader> sa` - insert date
-- `<localleader> si` - insert inactive date
-
-`<localleader>` is `\` for by default.
-
 ## Split Screen 
 **with the `<C-w>` key** 
 - `<Ctrl-w>n`       - `:new` horizontal split (editing a new empty buffer)
@@ -163,6 +145,30 @@ Sessions are used to save the current state of vim and restore it when you neede
 - `:bf` will change to first buffer.
 - `:ls` will list all the buffers.
 - `:bd` will Delete the buffer , also we can specify the buffer id too.
+
+## VIM plugins
+### Vim-OrgMode
+**Plain List:**
+- `<localleader> cl or <CR>` - insert plainlist item below
+- `<localleader> cL or <C-S-CR>` - insert plainlist item above
+
+**Checkboxes:**
+- `<localleader> cc` - toggle status
+- `<localleader> cn or <CR>` - insert checkbox below
+- `<localleader> cN or <C-S-CR>` - insert checkbox above
+
+**Dates:**
+- `<localleader> sa` - insert date
+- `<localleader> si` - insert inactive date
+
+`<localleader>` is `\` for by default.
+### Vim-RipGrep
+- `:Rg` - Will search the word under the curser.
+- `:Rg foo` - Will search the using provided search term `foo`.
+- `:Rg foo -g "*.cs"` - Will search files matching `*.cs`.
+- `:Rg foo -g "!*Test.cs"` - Will search files exluding the matching `*Test.cs`.
+- `:Rg -tcs -tcpp foobar` - Will search in`cs` and `cpp` files.
+- `:Rg -Txml foobar` - Will search exclude `xml` files.
 
 ## Random hacks
 - `:r !date /t` will add the current date.
