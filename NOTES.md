@@ -172,6 +172,8 @@ Sessions are used to save the current state of vim and restore it when you neede
 
 ## Random hacks
 - `:r !date /t` will add the current date.
+- `gx` will open the link under the curser.
+- `gf` will open the file path under the curser.
 
 ## Links
 1. http://www.rayninfo.co.uk/vimtips.html
